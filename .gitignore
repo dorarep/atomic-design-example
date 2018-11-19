@@ -12,3 +12,6 @@ dist
 
 # IntelliJ IDEA
 .idea
+
+# Storybook
+.cache
