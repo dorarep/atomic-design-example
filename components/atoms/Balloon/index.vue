@@ -1,5 +1,6 @@
 <template lang="pug">
-  span.balloon 削除する
+  span.balloon
+    slot
 </template>
 
 <style lang="stylus">

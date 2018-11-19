@@ -1,8 +1,8 @@
-import { storiesOf } from '@storybook/vue'
-import Balloon from '~/components/atoms/Balloon.vue'
+import { configure } from '@storybook/vue'
 
-storiesOf('Atoms', module)
-  .add('Balloon', () => ({
-    components: { Balloon },
-    template: `<Balloon />`
-  }))
+const req = require.context('../components', true, /.stories.js$/);
+function loadStories() {
+  req.keys().forEach(filename => req(filename));
+}
+
+configure(loadStories, module);
