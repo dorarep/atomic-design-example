@@ -17,3 +17,9 @@ $ yarn start
 # generate static project
 $ yarn run generate
 ```
+
+## Launch StoryBook
+
+```bash
+$ yarn run storybook
+```

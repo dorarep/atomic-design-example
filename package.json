@@ -11,12 +11,16 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook -s ."
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "@storybook/addon-console": "^1.1.0",
+    "moment": "^2.22.2",
+    "nuxt": "^2.0.0",
+    "vue-svg-loader": "^0.11.0"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^4.0.7",
     "@storybook/vue": "^4.0.7",
     "babel-eslint": "^10.0.1",
     "babel-preset-vue": "^2.0.2",
@@ -27,6 +31,7 @@
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2"
+    "stylus-loader": "^3.0.2",
+    "svg-url-loader": "^2.3.2"
   }
 }
