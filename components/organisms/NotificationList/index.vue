@@ -1,7 +1,6 @@
 <template lang="pug">
   div
-    template(v-for="program in programs")
-      notification.item(:program="program" :onClickDelete="onClickDelete")
+    notification.item(v-for="program in programs" :program="program" :onClickDelete="onClickDelete")
 </template>
 
 <script>

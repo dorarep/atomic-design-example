@@ -5,9 +5,9 @@
       heading(:level="3" :visualLevel="6") {{ program.title }}
       txt(info s) {{ program.channelName }}
       txt(info s).time
-        unix-time(format="MM月DD日(ddd)HH:mm") {{ program.startAt }}
+        unix-time(format="MM月DD日(ddd)HH:mm" :value="program.startAt")
         template 〜
-        unix-time(format="HH:mm") {{ program.endAt }}
+        unix-time(format="HH:mm" :value="program.endAt")
       delete-button(@click.native.down="onClickDelete")
 </template>
 

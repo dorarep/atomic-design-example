@@ -10,15 +10,15 @@
       format: {
         type: String,
         default: 'YYYY-MM-DDTHH:mm'
+      },
+      value: {
+        type: String,
+        required: true
       }
     },
     computed: {
       intValue () {
-        if (!this.$slots.default) {
-          return null
-        }
-
-        return parseInt(this.$slots.default[0].text, 10)
+        return parseInt(this.value, 10)
       },
       formattedValue () {
         if (!this.isValid(this.intValue)) {

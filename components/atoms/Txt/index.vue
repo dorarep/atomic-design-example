@@ -1,5 +1,5 @@
 <template lang="pug">
-  p(:class="{ default: isDefault, info: info, warning: warning, l: l, m: isM, s: s }")
+  p(:class="{ normal, info, warning, l, m, s }")
     slot
 </template>
 
@@ -24,10 +24,10 @@
       }
     },
     computed: {
-      isDefault () {
+      normal () {
         return !this.info && !this.warning
       },
-      isM () {
+      m () {
         return !this.s && !this.l
       }
     }
@@ -35,7 +35,7 @@
 </script>
 
 <style lang="stylus" scoped>
-  .default
+  .normal
     color #000
   .info
     color #8C8C8C

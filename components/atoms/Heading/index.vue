@@ -1,5 +1,5 @@
 <template lang="pug">
-  component(:is="tag" :class="className")
+  component.h(:is="tag" :class="className")
     slot
 </template>
 
@@ -23,14 +23,12 @@
         return `h${Math.max(0, Math.min(6, this.level))}`
       },
       className () {
-        const visualLevel = this.visualLevel || this.level
-        const classes = ['h', `h${Math.max(0, Math.min(6, visualLevel))}`]
+        const visualClass = `h${Math.max(0, Math.min(6, this.visualLevel || this.level))}`
 
-        if (this.underlined) {
-          classes.push('underlined')
+        return {
+          [visualClass]: true,
+          underlined: this.underlined
         }
-
-        return classes.join(' ')
       }
     }
   }
