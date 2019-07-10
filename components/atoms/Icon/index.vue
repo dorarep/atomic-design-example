@@ -1,6 +1,5 @@
 <template lang="pug">
-  trash-can(v-if="trash" :class="{ clickable: clickable }")
-  span(v-else)
+  component(:is="iconTag" :class="{ clickable }")
 </template>
 
 <script>
@@ -16,6 +15,14 @@
       clickable: {
         type: Boolean,
         default: false
+      }
+    },
+    computed: {
+      iconTag() {
+        if (this.trash) {
+          return 'trash-can'
+        }
+        return 'div'
       }
     }
   }

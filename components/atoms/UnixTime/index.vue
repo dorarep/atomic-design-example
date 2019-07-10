@@ -21,14 +21,14 @@
         return parseInt(this.value, 10)
       },
       formattedValue () {
-        if (!this.isValid(this.intValue)) {
+        if (!this.isValidTime(this.intValue)) {
           return '有効な時間表現ではありません。'
         }
         return moment(this.intValue).format(this.format)
       }
     },
     methods: {
-      isValid (value) {
+      isValidTime (value) {
         return moment(value, 'x', true).isValid()
       }
     }
