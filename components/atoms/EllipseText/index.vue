@@ -1,6 +1,6 @@
 <template lang="pug">
-  .wrapper
-    div(ref="textArea") {{ shownText }}
+  .wrapper(ref="parent")
+    div(ref="child") {{ shownText }}
 </template>
 
 <script>
@@ -22,7 +22,7 @@
     },
     methods: {
       sliceOverflownText() {
-        if (this.$refs.textArea.clientHeight > 90) {
+        if (this.$refs.child.clientHeight > this.$refs.parent.clientHeight) {
           this.hiddenLetters++
         }
       }
